@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">ICT311-WorkoutApp</string>
+    <string name="label_work_entry">Title</string>
+    <string name="work_entry_date">Date</string>
+    <string name="work_entry_place">Place</string>
+    <string name="add_entry">Add a work entry</string>
+    <string name="label_entry_title">Title</string>
+    <string name="hint_entry_title">What was done?</string>
+    <string name="label_entry_date">Date (enter, or select)</string>
+    <string name="button_entry_date">Select Date</string>
+    <string name="label_entry_place">Place</string>
+    <string name="hint_entry_place">Where was this done?</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_create">Add new entry</string>
+    <string name="dialog_delete_title">Delete selected entry?</string>
+    <string name="dialog_delete_title_many">Delete selected entries?</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
+    <string name="label_entry_time_start">Time started</string>
+    <string name="label_entry_time_end">Time ended</string>
+    <string name="label_entry_individual">Individual</string>
+    <string name="label_entry_group">Group</string>
+    <string name="label_entry_group_activity">Was this a group activity?</string>
+    <string name="button_entry_save">Save entry</string>
+    <string name="dialog_save_entry">Save changes?</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="toast_saved">New entry saved</string>
+    <string name="toast_updated">Entry updated</string>
+    <string name="toast_no_changes">No changes were made</string>
+    <string name="toast_invalid">Not all fields have valid values!</string>
+    <string name="text_divider">-</string>
+    <string name="hint_entry_date">dd/mm/yyyy</string>
+    <string name="toast_invalid_date">Invalid date format (should be dd/mm/yyyy)</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/o/Desktop/Uni/ICT311/ICT311WorkoutApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/o/Desktop/Uni/ICT311/ICT311WorkoutApp/app/src/main/res/layout/fragment_date_picker.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/o/Desktop/Uni/ICT311/ICT311WorkoutApp/app/src/main/res/layout/fragment_entry.xml" value="0.2" />
+        <entry key="..\:/Users/o/Desktop/Uni/ICT311/ICT311WorkoutApp/app/src/main/res/layout/work_list_fragment.xml" value="0.18" />
+        <entry key="..\:/Users/o/Desktop/Uni/ICT311/ICT311WorkoutApp/app/src/main/res/layout/work_list_item.xml" value="0.33" />
+        <entry key="..\:/Users/o/Desktop/Uni/ICT311/ICT311WorkoutApp/app/src/main/res/menu/actionbar_actions.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="15" project-jdk-type="JavaSDK" />
+</project>

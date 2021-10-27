@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:paddingBottom="40sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-thin"
+            android:text="@string/label_entry_title"
+            android:textAllCaps="true" />
+
+        <EditText
+            android:id="@+id/entry_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_entry_title"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:fontFamily="sans-serif-thin"
+            android:text="@string/label_entry_place"
+            android:textAllCaps="true" />
+
+        <EditText
+            android:id="@+id/entry_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_entry_place"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:fontFamily="sans-serif-thin"
+            android:text="@string/label_entry_date"
+            android:textAllCaps="true" />
+
+        <EditText
+            android:id="@+id/entry_date_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/hint_entry_date"
+            android:inputType="date|text"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/entry_date_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_entry_date" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:fontFamily="sans-serif-thin"
+            android:text="@string/label_entry_time_start"
+            android:textAllCaps="true" />
+
+        <TimePicker
+            android:id="@+id/entry_time_start"
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:timePickerMode="spinner" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:fontFamily="sans-serif-thin"
+            android:text="@string/label_entry_time_end"
+            android:textAllCaps="true" />
+
+        <TimePicker
+            android:id="@+id/entry_time_end"
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:timePickerMode="spinner" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:fontFamily="sans-serif-thin"
+            android:text="@string/label_entry_group_activity"
+            android:textAllCaps="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/isGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20sp" />
+
+            <TextView
+                android:id="@+id/label_is_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/label_entry_individual" />
+        </LinearLayout>
+
+        <!--    <Button-->
+        <!--        android:id="@+id/save_entry"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginTop="20sp"-->
+        <!--        android:text="@string/button_entry_save" />-->
+
+    </LinearLayout>
+</ScrollView>
