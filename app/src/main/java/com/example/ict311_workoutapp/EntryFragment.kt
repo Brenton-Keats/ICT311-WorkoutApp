@@ -210,6 +210,7 @@ class EntryFragment : Fragment() {
                     if (isNewEntry) {
                         Log.d(TAG, "saveEntry: Saving new entry")
                         entryDetailViewModel.createEntry(entry)
+                        Toast.makeText(mcontext, R.string.toast_saved, Toast.LENGTH_SHORT).show()
                     } else {
                         val dialogClickListener = DialogInterface.OnClickListener { _, selected ->
                             Log.d(TAG, "saveEntry: Prompting before updating entry")
