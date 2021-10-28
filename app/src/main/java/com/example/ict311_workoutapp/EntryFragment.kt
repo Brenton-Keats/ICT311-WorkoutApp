@@ -49,10 +49,12 @@ class EntryFragment : Fragment() {
     private lateinit var isGroupSwitch: SwitchCompat
     private lateinit var isGroupLabel: TextView
     private lateinit var calendar: Calendar
+    private lateinit var deleteButton: Button
 
     private val dateFormatter = DateTimeFormatter.ofPattern("E dd MMM yyyy")
     private val inputDateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
     private var isNewEntry: Boolean = false
+    private var entryDeleted: Boolean = false
     private val entryDetailViewModel: EntryDetailViewModel by lazy {
         ViewModelProviders.of(this).get(EntryDetailViewModel::class.java)
     }
@@ -78,7 +80,6 @@ class EntryFragment : Fragment() {
         calendar = Calendar.getInstance()
     }
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -94,6 +95,7 @@ class EntryFragment : Fragment() {
         endTimePicker = view.findViewById(R.id.entry_time_end)
         isGroupSwitch = view.findViewById(R.id.isGroup)
         isGroupLabel = view.findViewById(R.id.label_is_group)
+        deleteButton = view.findViewById(R.id.entry_delete_button)
 
         dateField.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
@@ -116,6 +118,27 @@ class EntryFragment : Fragment() {
 
         isGroupSwitch.setOnClickListener {
             isGroupLabel.setText(if (isGroupSwitch.isChecked) R.string.label_entry_group else R.string.label_entry_individual)
+        }
+''
+        deleteButton.setOnClickListener {
+            val dialogClickListener = DialogInterface.OnClickListener { _, selected ->
+                if (selected == DialogInterface.BUTTON_POSITIVE) {
+                        entryDetailViewModel.removeEntry(entry.id)
+                        entryDeleted = true
+                        Toast.makeText(
+                            mcontext,
+                            R.string.toast_deleted,
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        requireActivity().onBackPressed()
+                    }
+                }
+            AlertDialog.Builder(requireContext())
+                .setTitle(R.string.dialog_delete_title)
+                .setPositiveButton(R.string.dialog_yes, dialogClickListener)
+                .setNegativeButton(R.string.dialog_no, dialogClickListener)
+                .create()
+                .show()
         }
 
         return view
@@ -194,7 +217,9 @@ class EntryFragment : Fragment() {
          * Saves the entry if necessary. Returns true if not required, or successfully saved.
          */
         Log.d(TAG, "saveEntry: called")
-
+        if (entryDeleted) {
+            return true
+        }
         when (validateFieldsAreNewAndSaveable()) {
             true -> {
                 Log.d(TAG, "saveEntry: Changes made")

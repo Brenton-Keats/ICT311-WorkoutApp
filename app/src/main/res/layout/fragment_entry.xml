@@ -122,6 +122,12 @@
                 android:text="@string/label_entry_individual" />
         </LinearLayout>
 
+        <Button
+            android:id="@+id/entry_delete_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_entry_delete" />
+
         <!--    <Button-->
         <!--        android:id="@+id/save_entry"-->
         <!--        android:layout_width="match_parent"-->
