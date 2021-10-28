@@ -31,4 +31,6 @@
     <string name="text_divider">-</string>
     <string name="hint_entry_date">dd/mm/yyyy</string>
     <string name="toast_invalid_date">Invalid date format (should be dd/mm/yyyy)</string>
+    <string name="button_entry_delete">Delete entry</string>
+    <string name="toast_deleted">Entry deleted</string>
 </resources>
