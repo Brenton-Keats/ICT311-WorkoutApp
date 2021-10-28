@@ -61,6 +61,8 @@ class WorkListFragment : Fragment() {
                     for (id in selectedEntries) {
                         entryDetailViewModel.removeEntry(id)
                     }
+                    selectedEntries.clear()
+                    requireActivity().invalidateOptionsMenu()
                 }
                 else -> return@OnClickListener
             }
